@@ -48,7 +48,7 @@ public class EmergencyContacts extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emergency_contacts);
         Intent intent = getIntent();
-        appcontacts = intent.getStringArrayListExtra("savedContacts");
+      //  appcontacts = intent.getStringArrayListExtra("savedContacts");
         readContacts();
     }
 
@@ -126,7 +126,7 @@ public class EmergencyContacts extends Activity {
                     AlertDialog.Builder adb = new AlertDialog.Builder(EmergencyContacts.this);
                     adb.setTitle("Add contact?");
                     adb.setMessage("Are you sure you want to add " + contacts.get(position) + " to emergency contacts?");
-                    final int positionToRemove = position;
+                    final int positionToAdd = position;
                     adb.setNegativeButton("Cancel", null);
                     adb.setPositiveButton("Ok", new AlertDialog.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {

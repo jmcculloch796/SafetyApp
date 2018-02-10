@@ -9,8 +9,9 @@
 
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="horizontal"
+        android:gravity="center|bottom"
         >
     <Button
         android:layout_width="wrap_content"
@@ -28,7 +29,7 @@
             android:onClick = "sendLocation"
             android:padding="10dp"
             android:layout_marginTop="20dp"
-            android:paddingRight="10dp"
+            android:paddingRight="10dp"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -42,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:text="@string/cameraButton"
+            android:text="Photo"
             android:onClick = "openCamera"
             android:padding="10dp"
             android:layout_marginTop="20dp"

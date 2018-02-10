@@ -40,6 +40,7 @@ public class MapsActivity extends FragmentActivity implements
     LocationRequest mLocationRequest;
     Location mLastLocation;
     Marker mCurrLocationMarker;
+    String link;
 
 
 
@@ -145,12 +146,14 @@ public class MapsActivity extends FragmentActivity implements
 
     }
 
-    public void sendLocation(View view, Location location){
+    public void sendLocation(View view){
        // LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
-        String link = "http://maps.google.com/maps?q=loc:" + String.format("%f,%f", location.getLatitude() , location.getLongitude() );
-        System.out.println(link);
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("sms:" + "07551770279"));
-        intent.putExtra("sms_body", link);
+        String uri = "You can track my location here: http://maps.google.com/maps?q=loc:" + String.format("%f,%f", mLastLocation.getLatitude() , mLastLocation.getLongitude() );
+       System.out.println(uri);
+        Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse("sms" + "07551770279"));
+       // intent.setClassName("com.google.android.apps.maps", "com.google.android.maps.MapsActivity");
+        intent.setType("vnd.android-dir/mms-sms");
+        intent.putExtra("sms_body", uri);
         startActivity(intent);
     }
 
@@ -164,8 +167,10 @@ public class MapsActivity extends FragmentActivity implements
 
         //Place current location marker
         LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
-        sendLocation(location); //need to work out the view part of intent to transfer this
+        String link = "http://maps.google.com/maps?q=loc:" + String.format("%f,%f", location.getLatitude() , location.getLongitude() );
+         //need to work out the view part of intent to transfer this
 
+        System.out.println(link);
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(latLng);
         markerOptions.title("Current Position");
