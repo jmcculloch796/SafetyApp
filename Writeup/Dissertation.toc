@@ -1,0 +1,56 @@
+\contentsline {chapter}{\numberline {1}Introduction}{3}
+\contentsline {section}{\numberline {1.1}Overview}{3}
+\contentsline {section}{\numberline {1.2}Aims and Objectives}{3}
+\contentsline {section}{\numberline {1.3}Challenges and Possible Solutions}{4}
+\contentsline {section}{\numberline {1.4}Layout of Dissertation}{5}
+\contentsline {chapter}{\numberline {2}Background}{6}
+\contentsline {section}{\numberline {2.1}Gender Difference}{6}
+\contentsline {section}{\numberline {2.2}Age Difference}{6}
+\contentsline {section}{\numberline {2.3}Need for Personal Safety Applications}{7}
+\contentsline {section}{\numberline {2.4}Problems with Personal Safety Applications}{8}
+\contentsline {section}{\numberline {2.5}Perception of Smartphones}{9}
+\contentsline {section}{\numberline {2.6}Characteristics of Feeling Unsafe}{9}
+\contentsline {section}{\numberline {2.7}Mobile Phone Safety}{10}
+\contentsline {section}{\numberline {2.8}Related tools}{10}
+\contentsline {subsection}{\numberline {2.8.1}Social Media}{10}
+\contentsline {subsection}{\numberline {2.8.2}Existing Applications}{11}
+\contentsline {section}{\numberline {2.9}Android}{12}
+\contentsline {chapter}{\numberline {3}Requirements Analysis}{13}
+\contentsline {section}{\numberline {3.1}Survey Results}{13}
+\contentsline {section}{\numberline {3.2}Functional Requirements}{15}
+\contentsline {section}{\numberline {3.3}Non-functional Requirements}{16}
+\contentsline {chapter}{\numberline {4}Project Management}{17}
+\contentsline {section}{\numberline {4.1}Risk Analysis}{17}
+\contentsline {section}{\numberline {4.2}Project Plan}{19}
+\contentsline {section}{\numberline {4.3}Project Plan Writeup}{20}
+\contentsline {chapter}{\numberline {5}Professional, Ethical, Social, and Legal Issues}{22}
+\contentsline {chapter}{\numberline {6}Project Design}{23}
+\contentsline {section}{\numberline {6.1}Use Cases}{23}
+\contentsline {section}{\numberline {6.2}Initial User Interface and Name}{24}
+\contentsline {chapter}{\numberline {7}Implementation}{26}
+\contentsline {section}{\numberline {7.1}Intended functionality}{26}
+\contentsline {section}{\numberline {7.2}Prototype 1}{27}
+\contentsline {subsection}{\numberline {7.2.1}Implementing Prototype 1}{27}
+\contentsline {subsection}{\numberline {7.2.2}Evaluation of Prototype 1}{29}
+\contentsline {section}{\numberline {7.3}Prototype 2}{30}
+\contentsline {subsection}{\numberline {7.3.1}Implementing Prototype 2}{30}
+\contentsline {subsection}{\numberline {7.3.2}Evaluation of Prototype 2}{33}
+\contentsline {section}{\numberline {7.4}Prototype 3}{34}
+\contentsline {subsection}{\numberline {7.4.1}Implementation of Prototype 3}{34}
+\contentsline {subsection}{\numberline {7.4.2}Evaluation of Prototype 3}{35}
+\contentsline {chapter}{\numberline {8}Components of KeepSafe}{36}
+\contentsline {section}{\numberline {8.1}Front End Components}{37}
+\contentsline {section}{\numberline {8.2}Back End Components}{38}
+\contentsline {chapter}{\numberline {9}Future Plans}{39}
+\contentsline {section}{\numberline {9.1}Time Filters}{39}
+\contentsline {section}{\numberline {9.2}Proximity Based Social-Media}{39}
+\contentsline {chapter}{\numberline {10}Testing}{41}
+\contentsline {section}{\numberline {10.1}Unit Testing}{41}
+\contentsline {section}{\numberline {10.2}Component Testing}{41}
+\contentsline {section}{\numberline {10.3}Usability Testing}{41}
+\contentsline {chapter}{\numberline {11}Usability study}{43}
+\contentsline {chapter}{\numberline {A}Survey Questions}{47}
+\contentsline {chapter}{\numberline {B}Survey Results}{49}
+\contentsline {chapter}{\numberline {C}Use Cases}{51}
+\contentsline {section}{\numberline {C.1}SendLocation}{51}
+\contentsline {section}{\numberline {C.2}addContact}{52}

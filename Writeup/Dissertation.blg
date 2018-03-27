@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Dissertation.aux
+The style file: unsrt.bst
+Database file #1: ref.bib
+Warning--empty journal in penetration
+You've used 25 entries,
+            1791 wiz_defined-function locations,
+            583 strings with 7912 characters,
+and the built_in function-call counts, 4362 in all, are:
+= -- 374
+> -- 165
+< -- 0
++ -- 68
+- -- 43
+* -- 226
+:= -- 668
+add.period$ -- 74
+call.type$ -- 25
+change.case$ -- 25
+chr.to.int$ -- 0
+cite$ -- 26
+duplicate$ -- 168
+empty$ -- 506
+format.name$ -- 43
+if$ -- 980
+int.to.chr$ -- 0
+int.to.str$ -- 25
+missing$ -- 11
+newline$ -- 127
+num.names$ -- 22
+pop$ -- 121
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 80
+stack$ -- 0
+substring$ -- 241
+swap$ -- 24
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 39
+width$ -- 27
+write$ -- 252
+(There was 1 warning)
