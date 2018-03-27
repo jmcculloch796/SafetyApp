@@ -1,13 +1,33 @@
 <resources>
     <string name="app_name">Dissertation</string>
     <string name="title_activity_maps">Map</string>
-    <string name="title_activity_emergency_contacts">EmergencyContacts</string>
+    <string name="title_activity_emergency_contacts">Emergency Contacts</string>
     <string name="mapButton">Map</string>
     <string name="settingsButton">Settings</string>
     <string name="contactsButton">Emergency Contacts</string>
     <string name="title_activity_camera">CameraActivity</string>
     <string name="cameraButton">Take a photo</string>
-    <string name="title_activity_reqest_location">ReqestLocation</string>
-    <string name="title_activity_show_contacts">showContacts</string>
+    <string name="title_activity_reqest_location">Request Location</string>
+    <string name="title_activity_show_contacts">All Contacts</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_home">KeepSafe</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_emerg_contacts">Emergency Contacts</string>
+    <string name="welcome_text">Hello! Welcome to KeepSafe - a personal safety application that will hopefully
+                "make you feel safer when you're out and about! Select an option from the navigation bar below to start.</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_show_all_contacts">Show All Contacts</string>
+    <string name="show_contacts">Show Contacts</string>
+    <string name="send_loc">Send Location Update</string>
+    <string name="settings">Settings</string>
+    <string name="map">Map</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main">Home</string>
+    <string name="title_activity_alert_page">AlertPage</string>
+    <string name="title_activity_add_contacts">addContacts</string>
+    <string name="title_activity_remove_contact">removeContact</string>
 </resources>
 

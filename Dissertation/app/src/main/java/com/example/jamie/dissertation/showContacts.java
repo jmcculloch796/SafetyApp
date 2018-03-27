@@ -29,9 +29,11 @@ public class showContacts extends AppCompatActivity {
         //  alv = findViewById(R.id.contactsView);
         Intent intent = getIntent();
         appcontacts = intent.getStringArrayListExtra("savedContacts");
+        this.setTitle("Saved contacts");
         if (appcontacts == null)
         {
             System.out.println("No added contacts yet");
+
         } else {
             for (int i =0; i < appcontacts.size(); i++){
                 printToScreen();
@@ -41,11 +43,7 @@ public class showContacts extends AppCompatActivity {
         System.out.println(appcontacts);
 
     }
-    public void openEmergencyContacts(View view){
-        Intent intent = new Intent(this, EmergencyContacts.class);
-        intent.putStringArrayListExtra("savedContacts", appcontacts);
-        startActivity(intent);
-}
+
 
     public void printToScreen(){
         System.out.println("Test");

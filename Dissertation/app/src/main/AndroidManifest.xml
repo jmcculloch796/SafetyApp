@@ -11,13 +11,17 @@
 
     <uses-feature android:name="android.hardware.location.gps" />
 
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permissions.INTERNET" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
     <uses-permission
         android:name="android.hardware.camera"
         android:required="true" />
@@ -44,7 +48,32 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps">
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".CameraActivity"
+            android:label="@string/title_activity_camera"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RequestLocation"
+            android:label="@string/send_loc" />
+        <activity
+            android:name=".showContacts"
+            android:label="Emergency Contacts" />
+        <activity
+            android:name=".MainActivity"
+            android:label="KeepSafe" />
+        <activity
+            android:name=".emergContacts"
+            android:label="@string/title_activity_emerg_contacts" />
+        <activity
+            android:name=".settings"
+            android:label="@string/title_activity_settings" />
+        <activity
+            android:name=".showAllContacts"
+            android:label="@string/title_activity_show_all_contacts" />
+        <activity
+            android:name=".Home"
+            android:label="KeepSafe">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -52,24 +81,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".EmergencyContacts"
-            android:label="@string/title_activity_emergency_contacts"
+            android:name=".AboutPage"
+            android:label="About KeepSafe" />
+        <activity
+            android:name=".AlertPage"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".SettingsActivity"
-            android:label="Settings" />
+            android:name=".addContacts"
+            android:label="Add a Contact" />
         <activity
-            android:name=".CameraActivity"
-            android:label="@string/title_activity_camera"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".RequestLocation"
-            android:label="@string/title_activity_reqest_location"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".showContacts"
-            android:label="@string/title_activity_show_contacts"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:name=".removeContact"
+            android:label="Remove a Contact" />
+        <activity android:name=".settingsFirstTime"></activity>
     </application>
 
 </manifest>

@@ -2,11 +2,14 @@ package com.example.jamie.dissertation;
 
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.net.Uri;
 import android.os.Build;
+import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
@@ -41,6 +44,7 @@ public class MapsActivity extends FragmentActivity implements
     Location mLastLocation;
     Marker mCurrLocationMarker;
     String link;
+    public static String newLoc; //make it public and static
 
 
 
@@ -53,7 +57,8 @@ public class MapsActivity extends FragmentActivity implements
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-
+        //onLocationChanged(mLastLocation);
+        //String location = mLastLocation.toString();
 
     }
 
@@ -64,13 +69,19 @@ public class MapsActivity extends FragmentActivity implements
     }
 
     public void openSettings(View view) {
-        Intent intent = new Intent(this, SettingsActivity.class);
+        Intent intent = new Intent(this, settings.class);
         startActivity(intent);
     }
 
     public void openCamera(View view) {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         startActivityForResult(intent, 0);
+    }
+
+    public void openPanic(View view){
+        Intent callIntent = new Intent(Intent.ACTION_CALL);
+        callIntent.setData(Uri.parse("tel:123456789"));
+        startActivity(callIntent);
     }
 
 
@@ -111,6 +122,12 @@ public class MapsActivity extends FragmentActivity implements
 
        System.out.println("Your latitude is " + lat + " your longitude is "+ lng);
     }
+    public static void setDefaults(String key, String value, Context context) {
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString(key, value);
+        editor.apply();
+    }
     protected synchronized void buildGoogleApiClient() {
         mGoogleApiClient = new GoogleApiClient.Builder(this)
                 .addConnectionCallbacks(this)
@@ -146,11 +163,11 @@ public class MapsActivity extends FragmentActivity implements
 
     }
 
-    public void sendLocation(View view){
+    public void sendLocation(){
        // LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
         String uri = "You can track my location here: http://maps.google.com/maps?q=loc:" + String.format("%f,%f", mLastLocation.getLatitude() , mLastLocation.getLongitude() );
        System.out.println(uri);
-        Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse("sms" + "07551770279"));
+        Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse("sms"));
        // intent.setClassName("com.google.android.apps.maps", "com.google.android.maps.MapsActivity");
         intent.setType("vnd.android-dir/mms-sms");
         intent.putExtra("sms_body", uri);
@@ -167,7 +184,7 @@ public class MapsActivity extends FragmentActivity implements
 
         //Place current location marker
         LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
-        String link = "http://maps.google.com/maps?q=loc:" + String.format("%f,%f", location.getLatitude() , location.getLongitude() );
+       // newLoc = "http://maps.google.com/maps?q=loc:" + String.format("%f,%f", location.getLatitude() , location.getLongitude() );
          //need to work out the view part of intent to transfer this
 
         System.out.println(link);
@@ -176,6 +193,10 @@ public class MapsActivity extends FragmentActivity implements
         markerOptions.title("Current Position");
         markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA));
         mCurrLocationMarker = mMap.addMarker(markerOptions);
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("mapLoc", 0); // 0 - for private mode
+        SharedPreferences.Editor editor = pref.edit();
+        editor.putString("mapLoc", link);
+        editor.commit();
 
         //move map camera
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
